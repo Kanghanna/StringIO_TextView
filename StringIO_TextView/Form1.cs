@@ -48,6 +48,15 @@ namespace StringIO_TextView
             
         }
 
-  
+        private void txtEdit_KeyPress(object sender, KeyPressEventArgs e) //sender : 이벤트를 발생시킨 대상 ,KeyPressEventArgs : 입력된 값을 실행
+        {
+            if (e.KeyChar == (char)13)
+            {
+                if (TextCheck())
+                {
+                    this.lblResult.Text = this.OrgStr + this.txtEdit.Text;
+                }
+            }
+        }
     }
 }
